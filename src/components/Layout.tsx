@@ -5,6 +5,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 import { useTracker } from '../context/TrackerContext';
+import Footer from './Footer';
 
 export type Page = 'dashboard' | 'questions' | 'daily' | 'analytics' | 'revision';
 
@@ -143,6 +144,8 @@ export default function Layout({ children, page, onNavigate }: LayoutProps) {
         <main className="flex-1 overflow-y-auto">
           {children}
         </main>
+
+        <Footer />
       </div>
     </div>
   );
