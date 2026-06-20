@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/react';
 import { AuthProvider, useAuth } from './context/AuthContext';
 import { TrackerProvider } from './context/TrackerContext';
 import AuthPage from './components/AuthPage';
@@ -41,6 +42,7 @@ export default function App() {
   return (
     <AuthProvider>
       <AppContent />
+      <VercelAnalytics />
     </AuthProvider>
   );
 }
